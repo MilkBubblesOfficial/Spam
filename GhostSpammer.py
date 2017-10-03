@@ -2,15 +2,12 @@ import smtplib as s
 import getpass
  
 print"Please login with your Gmail account \n\r"
-
 username = raw_input("Gmail Username (user@gmail.com): ")
 password = getpass.getpass(prompt='Gmail Password: ')
-
 obj = s.SMTP("smtp.gmail.com:587")
 obj.starttls()
 obj.login(username, password)
 print"\n\r"
-
 print """ What kind of bomb would you like to send?
 1. SMS
 2. Email
